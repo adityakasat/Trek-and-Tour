@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Booking Form</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="/style_booking.css" />
+
+</head>
+
+<body>
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 col-md-push-5">
+						<div class="booking-cta">
+							<h1>Make your reservation</h1>
+							<p>The world is a book, and those who do not travel read only one page.We understand exactly what a simple trip can mean to a person and that is why we have created specially curated travel packages to ensure that you can have the most memorable experience possible. Travel the world with us and you can find the best of tour packages at Express Travels to suit any and every travelling need.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-md-pull-7">
+						<div class="booking-form">
+							
+							<form id="booking_form_id" method="POST" action="/auth/book">
+								<div class="form-group">
+									<span class="form-label">Your Destination</span>
+									<input class="form-control" type="text" placeholder="Enter a destination" name="destination" id="destination">
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<span class="form-label">Check In</span>
+											<input class="form-control" type="date" name="check_in" id="check_in" required>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<span class="form-label">Check out</span>
+											<input class="form-control" type="date" name="check_out" id="check_out" required>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="form-group">
+											<span class="form-label">Rooms</span>
+											<select class="form-control" name="rooms" id="rooms">
+												<option id="rooms_1_id">1</option>
+												<option id="rooms_2_id">2</option>
+												<option id="rooms_3_id">3</option>
+												<option id="rooms_4_id">4</option>												
+												<option id="rooms_5_id">5</option>												
+												<option id="rooms_6_id">6</option>												
+												<option id="rooms_7_id">7</option>												
+												<option id="rooms_8_id">8</option>												
+												<option id="rooms_9_id">9</option>												
+												<option id="rooms_10_id">10</option>												
+											</select>
+											<span class="select-arrow"></span>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="form-group">
+											<span class="form-label">Adults</span>
+											<select class="form-control" name="adults" id="adults">
+												<option id="adults_1_id">1</option>
+												<option id="adults_2_id">2</option>
+												<option id="adults_3_id">3</option>
+												<option id="adults_4_id">4</option>												
+												<option id="adults_5_id">5</option>												
+												<option id="adults_6_id">6</option>												
+												<option id="adults_7_id">7</option>												
+												<option id="adults_8_id">8</option>												
+												<option id="adults_9_id">9</option>												
+												<option id="adults_10_id">10</option>											
+											</select>
+											<span class="select-arrow"></span>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="form-group">
+											<span class="form-label">Children</span>
+											<select class="form-control" name="children" id="children">
+												<option id="children_0_id">0</option>
+												<option id="children_1_id">1</option>
+												<option id="children_2_id">2</option>
+												<option id="children_3_id">3</option>
+												<option id="children_4_id">4</option>												
+												<option id="children_5_id">5</option>												
+												<option id="children_6_id">6</option>												
+												<option id="children_7_id">7</option>												
+												<option id="children_8_id">8</option>												
+												<option id="children_9_id">9</option>												
+												<option id="children_10_id">10</option>												
+											</select>
+											<span class="select-arrow"></span>
+										</div>
+									</div>
+								</div>
+								{{!-- <div class="form-btn">
+									<button class="submit-btn">Check availability</button>
+									<a class="submit-btn_back" href="/">Back</a>
+								</div> --}}
+								<button class="submit-btn" id="book_tour_id">Book Tour</button>
+								<a class="submit-btn_back" href="/">Back</a>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{{#if message }}
+		<script>alert('{{message}}')</script>
+	{{/if}}
+
+</body>
+
+</html>

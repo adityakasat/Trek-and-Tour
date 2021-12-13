@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<link rel="stylesheet" href="/style_login.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div class="hero">
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" onclick="login()">Log In</button>
+			</div>
+
+			<div class="alr_reg">
+				<h5 align= "center" style="margin-left: 15px;">New User? <a href="/register">Register</a></h5>
+				<h5 align= "center" style="margin-left: 15px; margin-top: 5px;"><a href="/">Back to Home</a></h5>
+			</div>
+		
+			<div class="soical-icons">
+				<a href="#"><i class="fa fa-facebook-square  fa-6"></i></a>
+				<a href="#"><i class="fa fa-google-plus-square fa-6"></i></a>
+				<a href="#"><i class="fa fa-twitter-square fa-6"></i></a>
+			</div>
+
+			<form action="/auth/login"  method="POST" id="login" class="input-group">
+				<input type="email" class="input-field" id="user_id" placeholder="Enter email" name="email" required />
+				<input type="password" class="input-field" id="user_password"placeholder="Enter Password" name="password" required />
+				<input type="checkbox" class="check-box" /><span>Remember Password</span>
+				<button type="submit" class="submit-btn" id="login_btn_id">Log In</button>
+			</form>
+		</div>
+	</div>
+
+	{{#if message }}
+		<script>alert('{{message}}')</script>
+	{{/if}}
+
+</body>
+</html>

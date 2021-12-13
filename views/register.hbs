@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registration</title>
+	<link rel="stylesheet" href="/style_register.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	
+	<div class="hero">
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" >Register</button>
+			</div>
+			<div class="alr_reg">
+				<h5 align= "center" style="margin-left: 15px;">Already registered? <a href="/login">Login</a></h5>
+				<h5 align= "center" style="margin-left: 15px; margin-top: 5px;"><a href="/">Back to Home</a></h5>
+			</div>
+
+			<div class="soical-icons">
+				<a href="#"><i class="fa fa-facebook-square  fa-6"></i></a>
+				<a href="#"><i class="fa fa-google-plus-square fa-6"></i></a>
+				<a href="#"><i class="fa fa-twitter-square fa-6"></i></a>
+			</div>
+
+			<form action="/auth/register" method="POST" id="register" class="input-group" >
+				<input type="text" class="input-field" id="regis_username" placeholder="Enter your Name" name="username" required />
+				<input type="email" class="input-field" id="regis_email" placeholder="Enter Email" name="email" required />
+				<input type="password" class="input-field" id="regis_password"  placeholder="Enter Password" name="password" required />
+				<input type="password" class="input-field" id="regis_confirm_password"  placeholder="Confirm Password" name="confirm_password" required />
+				<input type="checkbox" class="check-box" /><span>I agree to the terms & conditions</span>
+				<button type="submit" class="submit-btn" id="register_btn_id">Register</button>
+			</form>
+		</div>		
+	</div>
+
+	{{#if message }}
+		<script>alert('{{message}}')</script>
+	{{/if}}
+
+</body>
+</html>
